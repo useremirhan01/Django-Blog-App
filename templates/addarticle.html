@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block body %}
+{% load crispy_forms_tags %}
+<div class="container">
+  <div class="col-md-auto offset-md-3">
+      <h3>Makale Oluştur</h3>
+<hr>
+      <form method = "post">
+
+          {% csrf_token %}
+          {{form.media}}
+          {{ content|safe }}
+          {{form|crispy}}
+          <br>
+          <button type = "submit" class = "btn btn-danger">Makale Oluştur</button>
+      
+      </form method>
+<hr>
+    </div>
+</div>
+
+
+
+{% endblock body %}

@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+
+{% block body %}
+  <div class = "mt-4 p-5 bg-secondary text-white text-center">
+    <h3>DMR Aviation Bloğuna Hoşgeldiniz</h3>
+    <p>bu blogta havalığa dair veya havacılıktan bağımsız olarak istediğiniz makaleleri yayınlayabilirsiniz ve bunu yapmanızdan hoşnutluk duyarız.</p>
+
+
+  </div>
+<p>
+
+    {{number}}
+</p>
+ 
+
+<p>
+
+  {% if request.user.is_authenticated %}
+      Giriş Yapılmış, {{request.user.username}}
+  {% else %}
+    Giriş Yapılmamış
+  {% endif %}
+  
+</p>
+  
+{% endblock  %}
